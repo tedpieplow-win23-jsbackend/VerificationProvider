@@ -55,8 +55,8 @@ public class VerificationService(ILogger<VerificationService> logger, IServicePr
                 {
                     To = verificationRequest.Email,
                     Subject = $"Verification Code {code}",
-                    HtmlBody = $"Hello! Someone tried to log in using {verificationRequest.Email}. If this is you please use code: {code} to verify your account. If this was not you contact our support",
-                    PlainText = $"Hello! Someone tried to log in using {verificationRequest.Email}. If this is you please use code: {code} to verify your account. If this was not you contact our support"
+                    HtmlBody = $"Hello! Someone requested a verification-code for: {verificationRequest.Email}. If this is you please use code: {code} to verify your account. If this was not you contact our support",
+                    PlainText = $"Hello! Someone requested a verification-code for: {verificationRequest.Email}. If this is you please use code: {code} to verify your account. If this was not you contact our support"
                 };
 
                 return emailRequest;
